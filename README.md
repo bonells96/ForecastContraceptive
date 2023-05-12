@@ -12,6 +12,7 @@ The model trained with the best results on the validation set is:
 
 The whole analysis can be encountered in this [notebook](/notebooks/notebook_contraceptives.ipynb)
 
+For executing the prediction for sample submission run this [script](/forecast_submission_sample.py)
 ## Data 
 
 - **contraceptive_logistics_data.csv**: The main dataset, it contains the target to predict: **stock_distributed** other information as the date, the product_code, the site_code and other variables as the stock ordered that day of the product in the site etc....
@@ -22,11 +23,41 @@ The whole analysis can be encountered in this [notebook](/notebooks/notebook_con
 
 ## Models
 
-During the 
+During the iterations we had the following models: 
 
+|Model|MSE|mean absolute error|median absolute error| R2 score|
+|:----:|:----:|:--------:|:--------------:|:-------:|
+|LR1_exp_1|545.06|9.71|3.66|0.32|
+|LR2_exp_1|545.07|9.71|3.66|0.32|
+|LR_district_exp_1|545.07|9.71|3.66|0.32|
+||
+|LR_exp_2|398.68|7.64|2.58|0.51|
+|RFR_exp_2|463.07|7.03|0.08|0.43|
+|GBR_exp_2|416.98|7.14|1.77|0.48|
+||
+|LR_exp_3|407.33|7.48|1.65|0.49|
+|RFR_exp_3|381.69|6.79|0.14|0.52|
 
 ## Next Steps
 
+- Analysis of errors:
+    - check what are the time series with the biggest error
+    - Look from errors potential ways to enhance the model
+- Debug the Neural Network and try more experiments.
+- Try model like LSTM that works with sequential data.
+- clean the repository
 
 
 ## Requirements
+
+
+```
+matplotlib==3.7.1
+numpy==1.24.3
+pandas==2.0.1
+scikit-learn==1.2.2
+scipy==1.10.1
+seaborn==0.12.2
+torch==2.0.1
+tqdm==4.65.0
+```
