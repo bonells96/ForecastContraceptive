@@ -1,7 +1,7 @@
-# ForecastContraceptive
+# Forecast Consumption of Contraceptive products
 
 
-We aim to predict consumption (stock_distributed from "train.csv") for 10 contraceptives across 156 health service delivery sites in the public sector health system in Côte D’Ivore. The predictions should be made monthly for three months (July, August, September from 2019). You should give the output of the model you consider to be the best approach in a file with the same format as “SampleSubmission.csv”
+We  predicted a model tp forecast consumption (stock_distributed from "train.csv") for 10 contraceptives across 156 health service delivery sites in the public sector health system in Côte D’Ivore. 
 
 The model trained with the best results on the validation set is:
 
@@ -12,7 +12,7 @@ The model trained with the best results on the validation set is:
 
 The whole analysis can be encountered in this [notebook](/notebooks/notebook_contraceptives.ipynb)
 
-For executing the prediction for sample submission run this [script](/forecast_submission_sample.py)
+To forecast the [sample_submission](/data/SampleSubmission.csv) file run this [script](/forecast_submission_sample.py)
 ## Data 
 
 - **contraceptive_logistics_data.csv**: The main dataset, it contains the target to predict: **stock_distributed** other information as the date, the product_code, the site_code and other variables as the stock ordered that day of the product in the site etc....
@@ -23,7 +23,7 @@ For executing the prediction for sample submission run this [script](/forecast_s
 
 ## Models
 
-During the iterations we had the following models: 
+Summary of results of the different models trained: 
 
 |Model|MSE|mean absolute error|median absolute error| R2 score|
 |:----:|:----:|:--------:|:--------------:|:-------:|
